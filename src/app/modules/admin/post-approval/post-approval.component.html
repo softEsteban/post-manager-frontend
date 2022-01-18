@@ -1,1 +1,56 @@
-<p>post-approval works!</p>
+<title>Aprobación</title>
+
+<style>
+    .headcito{
+        color: gray;
+        margin-bottom: 60px;
+    }
+</style>
+
+<div class="container">
+
+    <div class="headcito">
+        <h2>Solicitudes de publicación</h2>
+        <p>Puedes aprobar o rechazar las solicitudes. Las que apruebes serán
+         publicadas en el muro principal, y las demás en la lista de rechazadas</p>
+    </div>
+    
+
+    <table class="striped">
+        <thead>
+            <tr>
+                <th>Fecha</th>
+                <th>Titulo</th>
+                <th>Categoria</th>
+                <th>Texto</th>
+                <th>Estado</th>
+                <th>Opciones</th>
+
+            </tr>
+        </thead>
+
+        <ng-container *ngFor="let item of postList">
+
+            <tbody>
+
+                <tr>
+                    <td>{{item.reqDate}}</td>
+                    <td>{{item.title}}</td>
+                    <td>{{item.category}}</td>
+                    <td>{{item.text}}</td>
+                    <td>{{item.status}}</td>
+                    <td>  
+                    <a class="btn-floating "><i class="material-icons">add</i></a>
+                    </td>
+                    <td>  
+                    <a class="btn-floating "><i class="material-icons">clear</i></a>
+                    </td>
+                </tr>
+                
+                </tbody>
+
+            </ng-container>
+            
+          </table>
+
+</div>
