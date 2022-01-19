@@ -31,7 +31,7 @@ export class PostFormComponent implements OnInit {
   private initForm(): void {
     this.postForm = this.fb.group({
       title: ["", [Validators.required, Validators.minLength(3), Validators.pattern('^[a-zA-ZñÑ ]*$')]],
-      text: ["", [Validators.required, Validators.minLength(3), Validators.pattern('^[a-zA-ZñÑ ]*$')]],
+      text: ["", [Validators.required, Validators.minLength(3)] ],
       category: ["", Validators.required]
     })
   }

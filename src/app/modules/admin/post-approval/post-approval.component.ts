@@ -22,6 +22,7 @@ export class PostApprovalComponent implements OnInit {
     this.adminService.getAllPosts()
         .subscribe(resp => {
           this.postList = resp
+          this.postList.reverse()
         })
   }
 
