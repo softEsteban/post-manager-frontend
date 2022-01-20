@@ -3,7 +3,7 @@
 <style>
     .headcito{
         color: gray;
-        margin-bottom: 50px;
+        margin-bottom: 60px;
     }
     button{
         margin-top: 80px;
@@ -13,13 +13,14 @@
 
 <div class="container">
 
+    <div class="headcito">
+      <h3>Escribe tu confesión o anuncio</h3>
+      <p>Una vez envies tu publicación, el admin la revisará y la aprobará</p>
+    </div>
+
     <form role="form" 
       [formGroup]="postForm" (ngSubmit)="registerPost(postForm)">
 
-        <div class="headcito">
-          <h3>Escribe tu confesión o anuncio</h3>
-          <p>Una vez envies tu publicación, el admin la revisará y la aprobará</p>
-        </div>
          
 
           <div class="row">
@@ -34,18 +35,16 @@
                 {{error}}
               </div> -->
           </div>
-            
-          <div class="row">
-              <div class="row">
-                <div class="input-field col s12">
-                  <textarea id="text" name="text" class="materialize-textarea form-control"
-                  [ngClass]="{'is-invalid':postForm.get('text')?.invalid,
-                  'is-valid':postForm.get('text')?.valid}"
-                  formControlName="text"></textarea>
-                  <label for="text">¿Qué quieres decir?</label>
-                </div>
-              </div>
+        
+          <div class="input-field col s12">
+            <textarea id="text" name="text" class="materialize-textarea form-control"
+            [ngClass]="{'is-invalid':postForm.get('text')?.invalid,
+            'is-valid':postForm.get('text')?.valid}"
+            formControlName="text"></textarea>
+            <label for="text">¿Qué quieres decir?</label>
           </div>
+            
+          
 
 
           <select id="category" name="category" class="browser-default" 

@@ -8,6 +8,7 @@ import { NavBarComponent } from './template/nav-bar/nav-bar.component';
 import { FooterComponent } from './template/footer/footer.component';
 import { HomeComponent } from './template/home/home.component';
 import { ErrorComponent } from './template/error/error.component';
+import { RegisterComponent } from './modules/auth/register/register.component';
 
 @NgModule({
   declarations: [
