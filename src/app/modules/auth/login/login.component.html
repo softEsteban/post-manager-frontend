@@ -16,7 +16,8 @@
   </style>
   
   <div class="container">
-      <form class="col s12">
+
+      <form class="col s12" role="form" [formGroup]="loginForm" (ngSubmit)="login(loginForm)">
   
         <div class="headcito">
           <h3>Login</h3>
@@ -24,12 +25,18 @@
         </div>
   
         <div class="input-field col s6">
-          <input id="first_name" type="text" class="validate">
+          <input  id="username" name="username" type="text" class="form-control"
+                [ngClass]="{'is-invalid':loginForm.get('userName')?.invalid,
+                            'is-valid':loginForm.get('userName')?.valid}"
+                          formControlName="userName">
           <label for="first_name">Usuario</label>
         </div>
   
         <div class="input-field col s12">
-          <input id="password" type="password" class="validate">
+          <input  id="passw" name="passw" type="password" class="password"
+                [ngClass]="{'is-invalid':loginForm.get('passw')?.invalid,
+                            'is-valid':loginForm.get('passw')?.valid}"
+                          formControlName="passw">
           <label for="password">Contraseña</label>
         </div>
   
