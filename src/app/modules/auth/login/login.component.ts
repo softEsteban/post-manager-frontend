@@ -23,13 +23,14 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.initForm();
+    
   }
 
   //Init the login form group
   private initForm() : void {
     this.loginForm = this.formBuilder.group({
-      userName: [Validators.required],
-      passw: [Validators.required]
+      userName: ["", [Validators.required] ],
+      passw: ["",[Validators.required] ]
     })
   }
 
@@ -49,10 +50,10 @@ export class LoginComponent implements OnInit {
           confirmButtonText: "Aceptar"
         })
       }
+      this.router.navigate(['in/home'])
     
     }, error => {
       console.log("Fuck error:" + error)
-      
         Swal.fire({
           html: "Inténtalo de nuevo",
           icon: "warning",
@@ -60,8 +61,11 @@ export class LoginComponent implements OnInit {
           allowOutsideClick: false,
           confirmButtonText: "Aceptar"
         })
+      })
+    }
 
-    })
-  }
+    
+
+
 
 }

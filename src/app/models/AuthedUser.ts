@@ -1,5 +1,5 @@
 export interface AuthedUser {
-    data: UserData;
+    datos: UserData;
     tk: string;
 }
 

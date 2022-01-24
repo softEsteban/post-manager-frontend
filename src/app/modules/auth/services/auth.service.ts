@@ -22,11 +22,16 @@ export class AuthService {
         .pipe(
             tap(resp => {
                 sessionStorage.setItem("token", resp.tk);
-                sessionStorage.setItem("datosUser", JSON.stringify(resp.data))
+                sessionStorage.setItem("datos", JSON.stringify(resp.datos))
             })
         );
     }
 
+    //Get user data
+    get userData() {
+        const userData = sessionStorage.getItem("datos") || ""
+        return JSON.parse(userData) as UserData
+    }
 
 
 

@@ -15,15 +15,34 @@
       <a href="" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
         <li><a href="" routerLink="users/post-reading" >Muro</a></li>
-        <li><a href="" routerLink="users/post-form" >Crear un post</a></li>   
-        <li><a href="" routerLink="auth/login">Login</a></li>
+        <li  ><a href="" routerLink="users/post-form" >Crear un post</a></li>   
+        <li  ><a href="" routerLink="auth/login">Guardados</a></li>
+        <li  ><a href="" routerLink="**">Opciones</a></li>
+        <li id="userLogin"><a href="" routerLink="auth/login">Login</a></li>
+        <li><span id="userLog"></span></li> 
+
       </ul>
     </div>
-  </nav>
+</nav>
 
-  <ul class="sidenav" id="mobile-demo">
-    <li><a href="">Crear un post</a></li>   
-    <li><a href="">Publicados</a></li>
-    <li><a href=""> </a></li>
-  </ul>
+<ul class="sidenav" id="mobile-demo">
+  <li><a href="" routerLink="users/post-reading" >Muro</a></li>
+  <li><a href="" routerLink="users/post-form" >Crear un post</a></li>   
+  <li><a href="" routerLink="auth/login">Login</a></li>
+  
+  
+</ul>
           
+<script>
+  // function myFunction() {
+  //   var x = document.getElementById('userLog');
+  //   if(x.style.display=== "none"){
+  //     return;
+  //     document.getElementById('userLogin').style.display = 'none'
+  //   }else{
+  //     document.getElementById('userLogin').style.display = 'block'
+  //   }
+  // } 
+    
+  // myFunction();
+</script>
