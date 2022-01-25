@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable, tap } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { UserData, AuthedUser } from './../../../models/AuthedUser';
+import { User } from 'src/app/models/User';
 
 @Injectable({
     providedIn: 'root'
@@ -12,6 +13,7 @@ export class AuthService {
 
     constructor(
         private http: HttpClient
+
     ) { }
     
 
@@ -32,6 +34,12 @@ export class AuthService {
         const userData = sessionStorage.getItem("datos") || ""
         return JSON.parse(userData) as UserData
     }
+
+    // Verify existing username
+    // public checkUsername(userName: string): Observable<User> {
+    //     const url = this.host + "/users";
+    //     return this.http.get<User>(url);
+    // }
 
 
 

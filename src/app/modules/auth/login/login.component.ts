@@ -40,20 +40,9 @@ export class LoginComponent implements OnInit {
 
     this.authService.login(value).subscribe(resp =>{
       console.log(resp);
-
-      if(resp){
-        Swal.fire({
-          html: "Ingresaste",
-          icon: "success",
-          allowEscapeKey: false,
-          allowOutsideClick: false,
-          confirmButtonText: "Aceptar"
-        })
-      }
       this.router.navigate(['in/home'])
     
     }, error => {
-      console.log("Fuck error:" + error)
         Swal.fire({
           html: "Inténtalo de nuevo",
           icon: "warning",
@@ -63,9 +52,5 @@ export class LoginComponent implements OnInit {
         })
       })
     }
-
-    
-
-
 
 }
