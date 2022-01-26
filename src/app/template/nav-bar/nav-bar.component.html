@@ -20,8 +20,11 @@
         <li  ><a href="" routerLink="**">Opciones</a></li> -->
         <li id="userLogin"><a href="" routerLink="auth/login">Login</a></li>
         <li><span id="userLog"></span></li> 
-
+        <!-- <li id="userLogin"><a href="" *ngIf="userData.role=='user'" routerLink="auth/login">Logout</a></li> -->
+        
       </ul>
+
+
     </div>
 </nav>
 
@@ -29,6 +32,7 @@
   <li><a href="" routerLink="users/post-reading" >Muro</a></li>
   <li><a href="" routerLink="users/post-form" >Crear un post</a></li>   
   <li><a href="" routerLink="auth/login">Login</a></li>
+
 </ul>
           
 <script>

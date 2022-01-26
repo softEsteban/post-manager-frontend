@@ -35,6 +35,19 @@ export class AuthService {
         return JSON.parse(userData) as UserData
     }
 
+
+    //Delete session
+    private deleteSession() {
+        sessionStorage.removeItem("token");
+        sessionStorage.removeItem("datos");
+    }
+
+    public logoutSystem() {
+        this.deleteSession();
+    }
+
+
+
     // Verify existing username
     // public checkUsername(userName: string): Observable<User> {
     //     const url = this.host + "/users";

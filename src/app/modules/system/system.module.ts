@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 
 import { SystemRoutingModule } from './system-routing.module';
 import { HomeComponent } from './home/home.component';
+import { OptionsComponent } from './options/options.component';
 
 
 @NgModule({
   declarations: [
-    HomeComponent
+    HomeComponent,
+    OptionsComponent
   ],
   imports: [
     CommonModule,

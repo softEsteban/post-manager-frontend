@@ -10,10 +10,11 @@
     border: 1px solid grey;
     border-radius: 35px;
     margin-bottom: 30px;
+    width: 70%;
   }
   #inputBox{
     text-decoration: none;
-    width: 50%;
+    width: 65%;
   }
   #iconSearch{
     margin: 7px;
@@ -28,11 +29,24 @@
   </div>
 
 
-  <div id="searchBox">
-    <a class="btn-floating" id="iconSearch"><i class="material-icons">search</i></a>
-    <input type="text" id=inputBox>
+  <!-- # inner navbar -->
+  <div class="row">
+
+    <div class="col s7 l10">
+      <div id="searchBox">
+        <a class="btn-floating" id="iconSearch"><i class="material-icons">search</i></a>
+        <input type="text" id=inputBox>
+      </div>
+    </div>
+
+    <div class="col s5 l2">
+      <a href="" class="waves-effect waves-light btn" routerLink="/users/post-form"><i class="material-icons right">add</i>NEW</a>
+    </div>
+
   </div>
 
+  
+      
 
 
   <div class="card">
