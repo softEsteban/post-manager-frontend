@@ -1,9 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { UserData } from 'src/app/models/AuthedUser';
-import { AuthService } from '../../modules/auth/services/auth.service';
-
-
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-nav-bar',
@@ -12,17 +8,11 @@ import { AuthService } from '../../modules/auth/services/auth.service';
 })
 export class NavBarComponent implements OnInit {
 
-  // public userData : UserData;
+  constructor() { 
 
-  constructor(
-    private router : Router,
-    public authService: AuthService
-  ) {
-    // this.userData = authService.userData;
   }
 
-  ngOnInit(): void {
-
+  ngOnInit(): void { 
 
   }
 

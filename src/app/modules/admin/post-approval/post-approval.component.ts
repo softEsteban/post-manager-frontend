@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef } from '@angular/core';
 import { AdminService } from '../services/admin.service';
 
 @Component({
@@ -9,6 +9,7 @@ import { AdminService } from '../services/admin.service';
 export class PostApprovalComponent implements OnInit {
 
   public postList = [] as any;
+  public selectedPost = "";
 
   constructor(
     private adminService: AdminService
@@ -24,6 +25,13 @@ export class PostApprovalComponent implements OnInit {
           this.postList = resp
           this.postList.reverse()
         })
+  }
+
+  deletePost(id: string){
+    this.selectedPost= id;
+    alert('selected post: ' + id)
+    this.adminService.deletePost(id)
+        .subscribe()
   }
 
 }

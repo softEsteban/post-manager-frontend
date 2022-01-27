@@ -4,12 +4,24 @@
     }
 </style>
 
-<div class="row">
-    <div class="col s12">
-      <ul class="tabs myTabs">
-        <li class="tab col s3"><a href="#test1">Solicitudes</a></li>
-        <li class="tab col s3"><a class="active" href="#test2">Historial</a></li>
-        <li class="tab col s3"><a class="active" href="#" (click)="closeSession()">Salir</a></li>
-      </ul>
-    </div>
-</div>
+
+<nav>
+  <div class="nav-wrapper">
+    <a href="" routerLink="in/home" class="brand-logo">Confesiones.com</a> 
+    <a href="" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    <ul class="right hide-on-med-and-down">
+
+      <!-- user -->
+      <li><a href="" routerLink="" *ngIf="userData.role=='user'">Perfil</a></li>
+
+      <!-- admin -->
+      <li><a href="" routerLink="/admin/post-approval" *ngIf="userData.role=='admin'">Solicitudes</a></li>
+      <li><a href="" routerLink="/admin/post-approval" *ngIf="userData.role=='admin'">Usuarios</a></li>
+
+
+
+      <li id="userLogin"><a href="" (click)="closeSession()">Logout</a></li>
+      <li><i class="material-icons">directions_run</i></li>
+    </ul>
+  </div>
+</nav>

@@ -2,8 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { PostService } from '../services/post.service';
+import { UserData } from 'src/app/models/AuthedUser';
 import { switchAll } from 'rxjs';
 import Swal from 'sweetalert2';
+import { AuthService } from '../../auth/services/auth.service';
 // import { FormErrorService } from 'src/app/shared/services/form-error.service';
 
 
@@ -20,8 +22,10 @@ export class PostFormComponent implements OnInit {
   constructor(
       private router: Router,
       private fb: FormBuilder,
-      private postService: PostService
-  ) { }
+      private postService: PostService,
+      public authService : AuthService
+  ) {
+   }
 
   ngOnInit(): void {
     this.initForm();

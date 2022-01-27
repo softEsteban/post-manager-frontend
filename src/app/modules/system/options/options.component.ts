@@ -24,7 +24,7 @@ export class OptionsComponent implements OnInit {
   
   public closeSession():void{
     this.authService.logoutSystem();
-    this.router.navigate(['home'])
+    // this.router.navigate(['/home'])
   }
 
 }

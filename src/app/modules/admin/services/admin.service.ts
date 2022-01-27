@@ -19,5 +19,9 @@ export class AdminService {
         return this.http.get<Array<any>>(`${this.api}/posts`)
     }
 
+    public deletePost(id : string) {
+        return this.http.delete(`${this.api}/posts/${id}`)
+    }
+
 
 }
