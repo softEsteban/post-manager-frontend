@@ -11,14 +11,20 @@ export class PostService {
 
     private api = environment.host;
 
+
     constructor(
         private http: HttpClient
     ) { }
 
+    //register a post
     public registerPost(datos: Post): Observable<Post> {
         const url = this.api + "/posts";
         return this.http.post<Post>(url, datos);
     }
 
+    //get all approved posts by the admin
+    public getPubPosts() {
+        return this.http.get<Array<any>>(`${this.api}/posts?filter[where][status]=published`)
+    }
 
 }

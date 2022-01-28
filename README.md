@@ -1,4 +1,25 @@
-# ConfeApp
+# Postmanager
+
+  System roles  -> Admin, Users, NoRegisteredUser
+
+  Technologies
+
+   Backend (Nodejs, TypeScript, Loopback, MongoDB)
+   Frontend (Angular)
+
+
+  Basic usercases (...)
+
+
+
+
+
+
+
+
+
+
+# Config and framework auto-generated
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.3.
 

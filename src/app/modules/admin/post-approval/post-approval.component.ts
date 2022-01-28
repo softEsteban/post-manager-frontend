@@ -50,7 +50,7 @@ export class PostApprovalComponent implements OnInit {
           this.getPosts();
         })
       } else if (result.isDenied) {
-        alert('fiu')
+        return;
       }
 
     })
