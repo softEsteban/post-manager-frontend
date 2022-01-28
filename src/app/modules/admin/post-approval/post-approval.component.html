@@ -38,7 +38,7 @@
                     <td>{{item.category}}</td>
                     <td>{{item.text}}</td>
                     <td>  
-                    <a class="btn-floating "><i class="material-icons">add</i></a>
+                    <a class="btn-floating" (click)="updatePost(item.id)"><i class="material-icons">publish</i></a>
                     </td>
                     <td>  
                     <a class="btn-floating" (click)="deletePost(item.id)"> <i class="material-icons">clear</i> </a>

@@ -15,12 +15,21 @@ export class AdminService {
         private http: HttpClient
     ) { }
 
+    //get all post requests
     public getAllPosts() {
-        return this.http.get<Array<any>>(`${this.api}/posts`)
+        return this.http.get<Array<any>>(`${this.api}/posts?filter[where][status]=On%20hold`)
     }
 
+    //delete a selected post
     public deletePost(id : string) {
         return this.http.delete(`${this.api}/posts/${id}`)
+    }
+
+    //patch post ready to publish
+    public updatePost(id : string) {
+        let date= new Date();
+        const body = { status: 'published', publishedDate: date.toLocaleDateString()}
+        return this.http.patch<Post>(`${this.api}/posts/${id}`, body)
     }
 
 

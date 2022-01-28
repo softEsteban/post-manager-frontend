@@ -1,5 +1,7 @@
 import { Component, OnInit, TemplateRef } from '@angular/core';
 import { AdminService } from '../services/admin.service';
+import Swal from 'sweetalert2';
+
 
 @Component({
   selector: 'app-post-approval',
@@ -8,6 +10,7 @@ import { AdminService } from '../services/admin.service';
 })
 export class PostApprovalComponent implements OnInit {
 
+  //initial objects
   public postList = [] as any;
   public selectedPost = "";
 
@@ -19,6 +22,7 @@ export class PostApprovalComponent implements OnInit {
     this.getPosts();
   }
 
+  //get api method
   private getPosts(){
     this.adminService.getAllPosts()
         .subscribe(resp => {
@@ -27,11 +31,39 @@ export class PostApprovalComponent implements OnInit {
         })
   }
 
+  //delete api method
   deletePost(id: string){
     this.selectedPost= id;
-    alert('selected post: ' + id)
-    this.adminService.deletePost(id)
-        .subscribe()
+    Swal.fire({
+      html: "¿Seguro quieres eliminarlo de la base de datos?",
+      icon: "warning",
+      showDenyButton: true,
+      allowEscapeKey: false,
+      allowOutsideClick: false,
+      confirmButtonText: "Aceptar",
+      denyButtonText: "Cancelar"
+    }).then((result) => {
+      if(result.isConfirmed){
+        this.adminService.deletePost(id)
+        .subscribe(resp => {
+          console.log(resp);
+          this.getPosts();
+        })
+      } else if (result.isDenied) {
+        alert('fiu')
+      }
+
+    })
+   
+  }
+
+  //update api method
+  updatePost(id: string) {
+    this.adminService.updatePost(id)
+        .subscribe(resp => {
+          console.log(resp)
+          this.getPosts();
+        })
   }
 
 }

@@ -4,5 +4,6 @@ export interface Post {
     text: string,
     category: string,
     status: string,
-    reqDate: string
+    reqDate: string,
+    publishedDate: string
 }
