@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, tap } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { UserData, AuthedUser } from './../../../models/AuthedUser';
+import { UserData, AuthedUser } from '../models/AuthedUser';
 import { User } from 'src/app/models/User';
 
 @Injectable({
@@ -23,7 +23,7 @@ export class AuthService {
         { userName: CredentialData.userName, passw: CredentialData.passw })
         .pipe(
             tap(resp => {
-                sessionStorage.setItem("token", resp.tk);
+                sessionStorage.setItem("token", resp.tk.toString());
                 sessionStorage.setItem("datos", JSON.stringify(resp.datos))
             })
         );

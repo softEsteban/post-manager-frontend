@@ -8,6 +8,10 @@ import { NavBarComponent } from './template/nav-bar/nav-bar.component';
 import { FooterComponent } from './template/footer/footer.component';
 import { HomeComponent } from './template/home/home.component';
 import { ErrorComponent } from './template/error/error.component';
+import { LoginComponent } from './components/login/login.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RegisterComponent } from './components/register/register.component';
+import { WallComponent } from './components/wall/wall.component';
 
 @NgModule({
   declarations: [
@@ -15,16 +19,20 @@ import { ErrorComponent } from './template/error/error.component';
     NavBarComponent,
     FooterComponent,
     HomeComponent,
-    ErrorComponent
-  ],
+    ErrorComponent,
+    LoginComponent,
+    RegisterComponent,
+    WallComponent
+   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    CommonModule
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
-    NavBarComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

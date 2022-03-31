@@ -14,8 +14,13 @@
       <a href="" routerLink="home" class="brand-logo">Confesiones.com</a>   
       <a href="" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="" routerLink="/users/post-reading" >Muro</a></li>
-        <li id="userLogin"><a href="" routerLink="/auth/login">Login</a></li>
+        <li><a href="" routerLink="wall" >Muro</a></li>
+        <li id="userLogin"><a href="" routerLink="/login">Login</a></li>
+
+        <li ><a href="" (click)="getRole()">Get Role</a></li>
+        <!-- <li ><a href="" (click)="saveLocalStorage()">Save Local Id</a></li>
+        <li ><a href="" (click)="getLocalStorage()">Get Local Id</a></li> -->
+        
       </ul>
     </div>
 </nav>

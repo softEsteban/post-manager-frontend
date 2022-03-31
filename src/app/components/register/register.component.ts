@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { RegisterService } from '../services/register.service';
+import { RegisterService } from '../../services/register.service';
 import { switchAll } from 'rxjs';
 import Swal from 'sweetalert2';
 

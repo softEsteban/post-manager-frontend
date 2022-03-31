@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { PostService } from '../services/post.service';
+import { PostService } from '../../modules/users/services/post.service';
 
 @Component({
-  selector: 'app-post-reading',
-  templateUrl: './post-reading.component.html',
-  styleUrls: ['./post-reading.component.css']
+  selector: 'app-wall',
+  templateUrl: './wall.component.html',
+  styleUrls: ['./wall.component.css']
 })
-export class PostReadingComponent implements OnInit {
+export class WallComponent implements OnInit {
 
   //Initial objects
   public postList = [] as any;

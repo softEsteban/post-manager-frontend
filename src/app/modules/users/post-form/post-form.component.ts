@@ -5,7 +5,7 @@ import { PostService } from '../services/post.service';
 import { UserData } from 'src/app/models/AuthedUser';
 import { switchAll } from 'rxjs';
 import Swal from 'sweetalert2';
-import { AuthService } from '../../auth/services/auth.service';
+import { AuthService } from '../../../services/auth.service';
 // import { FormErrorService } from 'src/app/shared/services/form-error.service';
 
 
