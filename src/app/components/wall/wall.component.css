@@ -1,0 +1,23 @@
+.headcito{
+    color: gray;
+    margin-bottom: 60px;
+}
+
+#searchBox{
+  border: 1px solid grey;
+  border-radius: 35px;
+  margin-bottom: 16px;
+}
+#inputBox{
+  text-decoration: none;
+  width: 65%;
+}
+#iconSearch{
+  margin: 7px;
+}
+
+.cls-add-button{
+  text-transform: none;
+  width: 120px;
+  margin: 0px 35%
+}

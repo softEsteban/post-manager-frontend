@@ -1,0 +1,35 @@
+.headcito{
+    color: gray;
+    margin-bottom: 60px;  
+}
+#registerPage{
+  color: gray;
+  text-decoration: underline;
+}
+#registerPage:hover{
+  color: rgb(65, 65, 65);
+}
+
+.cls-contain{
+    margin-top: 50px;
+    text-align: center;
+    background-color: #f1efff;
+    padding: 53px 58px;
+    border-radius: 19px 85px 19px 7px;
+    max-width: max-content;
+}
+
+h3{
+    margin-bottom: 58px;
+}
+
+label{
+    font-size: 14px;
+}
+
+.cls-button{
+    width: 137px;
+    margin-top: 18px;
+    text-transform: none;
+    background-color: #ee6e6e;
+}

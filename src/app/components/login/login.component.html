@@ -1,21 +1,6 @@
-<title>Login | Auth</title>
-
-<style>
-    .headcito{
-        color: gray;
-        margin-bottom: 60px;  
-    }
-    #registerPage{
-      color: gray;
-      text-decoration: underline;
-    }
-    #registerPage:hover{
-      color: rgb(65, 65, 65);
-    }
-
-  </style>
+<title>Login</title>
   
-  <div class="container">
+  <div class="container cls-contain">
 
       <form class="col s12" role="form" [formGroup]="loginForm" (ngSubmit)="login(loginForm)">
   
@@ -23,25 +8,26 @@
           <h3>Login</h3>
           <p>Accede al sistema y sus funcionalidades</p>
         </div>
-  
+        
+        <label for="first_name">Usuario</label>
         <div class="input-field col s6">
           <input  id="username" name="username" type="text" class="form-control"
                 [ngClass]="{'is-invalid':loginForm.get('userName')?.invalid,
                             'is-valid':loginForm.get('userName')?.valid}"
                           formControlName="userName">
-          <label for="first_name">Usuario</label>
+          
         </div>
-  
+        
+        <label for="password">Contraseña</label>
         <div class="input-field col s12">
           <input  id="passw" name="passw" type="password" class="password"
-                [ngClass]="{'is-invalid':loginForm.get('passw')?.invalid,
-                            'is-valid':loginForm.get('passw')?.valid}"
-                          formControlName="passw">
-          <label for="password">Contraseña</label>
+                [ngClass]="{'is-invalid':loginForm.get('passw')?.invalid,'is-valid':loginForm.get('passw')?.valid}"
+                formControlName="passw">
+          
         </div>
   
         <div class="input-field col s12">
-          <button class="btn waves-effect waves-light"  type="submit" name="action">Ingresar</button>
+          <button class="btn waves-effect waves-light cls-button"  type="submit" name="action">Ingresar</button>
         </div>
 
         <div>

@@ -1,73 +1,56 @@
 <title>Muro</title>
 
-<style>
-  .headcito{
-      color: gray;
-      margin-bottom: 60px;
-  }
-
-  #searchBox{
-    border: 1px solid grey;
-    border-radius: 35px;
-    margin-bottom: 30px;
-    width: 70%;
-  }
-  #inputBox{
-    text-decoration: none;
-    width: 65%;
-  }
-  #iconSearch{
-    margin: 7px;
-  }
-</style>
-
 <div class="container">
-  
   <div class="headcito">
     <h3>Muro</h3>
     <p>Busca, filtra y guarda las publicaciones</p>
   </div>
 
-
-  <!-- # inner navbar -->
   <div class="row">
-
-    <div class="col s7 l10">
+    <div class="col s12 l10">
       <div id="searchBox">
-        <a class="btn-floating" id="iconSearch"><i class="material-icons">search</i></a>
-        <input type="text" id=inputBox>
+        <a class="btn-floating" id="iconSearch"
+          ><i class="material-icons">search</i></a
+        >
+        <input type="text" id="inputBox" />
       </div>
     </div>
-
-    <div class="col s5 l2">
-      <a href="" class="waves-effect waves-light btn" routerLink="/users/post-form"><i class="material-icons right">add</i>NEW</a>
+    <div class="col s12 l2">
+      <a
+        href=""
+        class="waves-effect waves-light btn cls-add-button"
+        routerLink="/users/post-form"
+        ><i class="material-icons right">add</i>Nuevo</a
+      >
     </div>
-
   </div>
 
-  
-  <ng-container *ngFor="let item of postList">
-
-    <div class="card">
-      <div class="card-content">
-        <span class="card-title activator grey-text text-darken-4">{{item.title}}<i class="material-icons right">more_vert</i></span>
-        <p>{{item.category}}</p>
-        <p>{{item.text}}</p>
-        <p>{{item.publishedDate}}</p>
-
-      </div>
-      <div class="card-reveal">
-        <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-        <p>Here is some more information about this product that is only revealed once clicked on.</p>
-      </div>
+  <div class="grid">
+    <div class="row">
+      <ng-container *ngFor="let item of postList">
+        <div class="col l4" >
+          <div class="card">
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4"
+                >{{ item.title
+                }}<i class="material-icons right">more_vert</i></span
+              >
+              <p>{{ item.category }}</p>
+              <p>{{ item.text }}</p>
+              <p>{{ item.publishedDate }}</p>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4"
+                >Card Title<i class="material-icons right">close</i></span
+              >
+              <p>
+                Here is some more information about this product that is only
+                revealed once clicked on.
+              </p>
+            </div>
+          </div>
+        </div>
+      </ng-container>
     </div>
-
-  </ng-container>
-  
-
-
+  </div>
 </div>
-
-
-
-
