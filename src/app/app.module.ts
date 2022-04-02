@@ -12,6 +12,7 @@ import { LoginComponent } from './components/login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './components/register/register.component';
 import { WallComponent } from './components/wall/wall.component';
+import { LoggedHomeComponent } from './components/logged-home/logged-home.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { WallComponent } from './components/wall/wall.component';
     ErrorComponent,
     LoginComponent,
     RegisterComponent,
-    WallComponent
+    WallComponent,
+    LoggedHomeComponent
    ],
   imports: [
     BrowserModule,

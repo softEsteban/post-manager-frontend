@@ -4,6 +4,9 @@
   <div class="headcito">
     <h3>Muro</h3>
     <p>Busca, filtra y guarda las publicaciones</p>
+    <ng-container *ngIf="user">
+      <p>Hola, {{ user }}! Puedes guardar tus publicaciones favoritas</p>
+    </ng-container>
   </div>
 
   <div class="row">
@@ -28,25 +31,16 @@
   <div class="grid">
     <div class="row">
       <ng-container *ngFor="let item of postList">
-        <div class="col l4" >
-          <div class="card">
+        <div class="col l4">
+          <div class="card cls-my-card">
             <div class="card-content">
               <span class="card-title activator grey-text text-darken-4"
                 >{{ item.title
-                }}<i class="material-icons right">more_vert</i></span
+                }}<i class="material-icons right cls-icon-save" *ngIf="user" (click)="savePost()">bookmark</i></span
               >
               <p>{{ item.category }}</p>
               <p>{{ item.text }}</p>
               <p>{{ item.publishedDate }}</p>
-            </div>
-            <div class="card-reveal">
-              <span class="card-title grey-text text-darken-4"
-                >Card Title<i class="material-icons right">close</i></span
-              >
-              <p>
-                Here is some more information about this product that is only
-                revealed once clicked on.
-              </p>
             </div>
           </div>
         </div>

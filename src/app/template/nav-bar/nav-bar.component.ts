@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { AuthService } from 'src/app/services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav-bar',
@@ -10,17 +12,24 @@ export class NavBarComponent implements OnInit {
 
   currentUser={role:""};
 
-  constructor() { 
-
+  constructor(
+    public authService: AuthService,
+    public router: Router
+  ) { 
+    
   }
 
   ngOnInit(): void { 
-
+    this.getRole();
   }
 
   getRole() {
     this.currentUser = JSON.parse(sessionStorage.getItem('datos') || '{}');
-    console.log(this.currentUser.role)
+  }
+
+  logOut(){
+    this.authService.logoutSystem();
+    // this.router.navigate(['/home']);
   }
 
   // saveLocalStorage() {

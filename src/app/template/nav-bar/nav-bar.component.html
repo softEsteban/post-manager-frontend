@@ -16,11 +16,7 @@
       <ul class="right hide-on-med-and-down">
         <li><a href="" routerLink="wall" >Muro</a></li>
         <li id="userLogin"><a href="" routerLink="/login">Login</a></li>
-
-        <li ><a href="" (click)="getRole()">Get Role</a></li>
-        <!-- <li ><a href="" (click)="saveLocalStorage()">Save Local Id</a></li>
-        <li ><a href="" (click)="getLocalStorage()">Get Local Id</a></li> -->
-        
+        <li ><a *ngIf="currentUser.role == 'user'" (click)="logOut()">Log out</a></li>
       </ul>
     </div>
 </nav>

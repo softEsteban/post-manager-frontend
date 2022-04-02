@@ -11,13 +11,17 @@ export class WallComponent implements OnInit {
 
   //Initial objects
   public postList = [] as any;
+  currentUser= {id:"", role:"", user:""};
+  user="";
+  
 
   constructor(
-    public postService: PostService
+    public postService: PostService,
   ) { }
 
   ngOnInit(): void {
-    this.getPosts()
+    this.getPosts();
+    this.getSession();
   }
 
 
@@ -30,4 +34,23 @@ export class WallComponent implements OnInit {
         })
   }
 
+  //verify if there is a user in session storage
+  getSession() {
+    this.currentUser = JSON.parse(sessionStorage.getItem('datos') || '{}');
+    this.user = this.currentUser.user;
+    console.log(this.currentUser.id)
+    console.log(this.currentUser.role)
+    console.log(this.currentUser.user)
+  }
+
+
+  savePost() {
+    alert("Got it!")
+  }
+
+
+
+
 }
+
+

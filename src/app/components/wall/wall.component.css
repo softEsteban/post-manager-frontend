@@ -21,3 +21,12 @@
   width: 120px;
   margin: 0px 35%
 }
+
+.cls-my-card{
+  height: 216px;
+  width: 380px;
+}
+
+.cls-icon-save{
+  color: gray;
+}

@@ -48,14 +48,4 @@ export class AuthService {
 
 
 
-    // Verify existing username
-    // public checkUsername(userName: string): Observable<User> {
-    //     const url = this.host + "/users";
-    //     return this.http.get<User>(url);
-    // }
-
-
-
-
-
 }
